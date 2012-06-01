@@ -28,7 +28,9 @@ TARGETS=foto_promedio foto_mediana
 
 all: foto_promedio foto_mediana
 foto_promedio: foto_promedio.o 
+	$(CXX) -o $@ $^ $(CXXFLAGS) $(LDFLAGS)
 foto_mediana:  foto_mediana.o
+	$(CXX) -o $@ $^ $(CXXFLAGS) $(LDFLAGS)
 clean:
 	rm -f foto_promedio foto_mediana *.o
 
